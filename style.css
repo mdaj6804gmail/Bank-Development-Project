@@ -2,38 +2,51 @@
   margin: 0;
   padding: 0;
 }
-.container{
-    margin-top:100px ;
-}
-.login_form{
-    margin-top: 40px;
-padding: 50px;
-border-radius: 10px;
-box-shadow: 5px 5px 10px rgb(107, 105, 105);
-}
-#Transaction-Area{
-    display: none;
-}
+.container {
+  margin-top: 100px;
 
-.Deposit{
-    background-color: slateblue;
-    border-radius: 10px;
-    padding: 10px;
 }
-.Withdraw{
-    background-color: lightsalmon;
-    border-radius: 10px;
-    padding: 10px;
+.login_form {
+  margin-top: 40px;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgb(107, 105, 105);
 }
-.Balance{
-    background-color:orange;
-    border-radius: 10px;
-    padding: 10px;
+#Transaction-Area {
+  display: none;
 }
 
+.Deposit {
+  background-color: slateblue;
+  border-radius: 10px;
+  padding: 10px;
+}
+.Withdraw {
+  background-color: lightsalmon;
+  border-radius: 10px;
+  padding: 10px;
+}
+.Balance {
+  background-color: orange;
+  border-radius: 10px;
+  padding: 10px;
+}
+.Deposit,.Withdraw ,.Balance {
+    margin: 0 20px;
 
+}
+.mar_for,.mar_for{
+    margin: 50px 10px; 
+}
 
-
-
-
+@media (max-width: 768) {
+  #Transaction-Area {
+    margin: 0 50px;
+  }
+  .mar_for,.mar_for{
+    margin: 0 10px; 
+}
+ 
+}
+  
 
