@@ -2,9 +2,13 @@
   margin: 0;
   padding: 0;
 }
-.container {
+/* .container {
   margin-top: 100px;
 
+} */
+#loginForm{
+  margin-top: 100px;
+ 
 }
 .login_form {
   margin-top: 40px;
@@ -13,7 +17,8 @@
   box-shadow: 5px 5px 10px rgb(107, 105, 105);
 }
 #Transaction-Area {
-  display: none;
+  /* display: none; */
+  margin-top: 100px;
 }
 
 .Deposit {
@@ -39,14 +44,24 @@
     margin: 50px 10px; 
 }
 
-@media (max-width: 768) {
+@media (max-width: 768px) {
   #Transaction-Area {
-    margin: 0 50px;
+   margin-top: 50px;
   }
   .mar_for,.mar_for{
-    margin: 0 10px; 
+    margin: none; 
 }
- 
+#Transaction-Area {
+  /* display: none; */
+  margin-top: 40px;
+}
+.last-child1{
+  margin-top: -10px;
+}
+.mar_for,.mar_for{
+  margin: 10px 14px; 
+}
+
 }
   
 
