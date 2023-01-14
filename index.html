@@ -35,7 +35,7 @@
       <div class="col-md-4 g-2">
         <div class="Withdraw">
           <h5>Withdraw</h5>
-          <h1>$00</h1>
+          <h1>$ <span id="Withdraw">00</span></h1>
         </div>
       </div>
       <div class="col-md-4 g-2">
@@ -57,7 +57,7 @@
       <div class="col-md-6">
         <div class="login_form mar_for last-child1">
           <h4>Withdraw</h4>
-          <input class="form-control mb-3" placeholder="$ amount you want to withdraw" type="text" name="" id="" />
+          <input class="form-control mb-3" placeholder="$ amount you want to withdraw" type="text" name="" id="Withdraw_Amaomd" />
           <button id="Withdraw_btn" class="btn btn-success">Withdraw</button>
         </div>
       </div>
@@ -80,22 +80,60 @@
 
 const Deposit_btn=document.getElementById("Deposit_btn");
 Deposit_btn.addEventListener("click",function(){
- const Deposit_Amaomd=document.getElementById("Deposit_Amaomd").value;
-const DepositNumber=parseFloat(Deposit_Amaomd);
+  const DepositNumber=getinput("Deposit_Amaomd")
+//  const Deposit_Amaomd=document.getElementById("Deposit_Amaomd").value;
+// const DepositNumber=parseFloat(Deposit_Amaomd);
 
-const corentDeposit=document.getElementById("corentDeposit").innerText;
-const corentDepositNumber=parseFloat(corentDeposit);
-const totalDeposit=DepositNumber+corentDepositNumber;
-document.getElementById("corentDeposit").innerText=totalDeposit;
+//    const corentDeposit=document.getElementById("corentDeposit").innerText;
+// const corentDepositNumber=parseFloat(corentDeposit);
+// const totalDeposit=DepositNumber+corentDepositNumber;
+// document.getElementById("corentDeposit").innerText=totalDeposit;
+// //BalanceMonitor
+// const BalanceMonitor=document.getElementById("BalanceMonitor").innerText;
+// const BalanceMonitorNumber=parseFloat(BalanceMonitor);
+// const totalBalance=DepositNumber+BalanceMonitorNumber;
+// document.getElementById("BalanceMonitor").innerText=totalBalance;
 
-//BalanceMonitor
-const BalanceMonitor=document.getElementById("BalanceMonitor").innerText;
-const BalanceMonitorNumber=parseFloat(BalanceMonitor);
-const totalBalance=DepositNumber+BalanceMonitorNumber;
-document.getElementById("BalanceMonitor").innerText=totalBalance;
+updatespanText("corentDeposit",DepositNumber)
+document.getElementById("Deposit_Amaomd").value= '';
+updatespanText("BalanceMonitor",DepositNumber);
+ });
+
+
+ //Withdraw_btn addeven haneler
+
+ const Withdraw_btn=document.getElementById("Withdraw_btn");
+ Withdraw_btn.addEventListener("click", function(){
+ const Withdraw_Number=getinput("Withdraw_Amaomd");
+// const corentDeposit=document.getElementById("corentDeposit").innerText;
+// const corentDepositNumber=parseFloat(corentDeposit);
+// const totalDeposit=DepositNumber+corentDepositNumber;
+// document.getElementById("corentDeposit").innerText=totalDeposit;
+console.log(Withdraw_Number);
+
+document.getElementById("Withdraw_Amaomd").value= "";
+ });
+ function getinput(id){
+  const Amaomd=document.getElementById(id).value;
+const amaomdNumber=parseFloat(Amaomd);
+return amaomdNumber;
+
+ }
+
+function updatespanText(id,DepositNumber){
+  const Balance=document.getElementById(id).innerText;
+const BalanceNumber=parseFloat(Balance);
+const total=DepositNumber+BalanceNumber;
+document.getElementById(id).innerText=total;
 document.getElementById("Deposit_Amaomd").value= '';
 
-});
+
+
+
+}
+
+
+
 
 
 
