@@ -1,14 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-</body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="loginForm" class="container">
+      <h2 class="text-center">Welcome to Pioneer Bank</h2>
+      <div class="login_form">
+        <h3>Login</h3>
+        <input
+          type="email"
+          class="form-control mt-2"
+          name=""
+          id=""
+          placeholder="Email"
+        />
+        <input
+          type="password"
+          class="form-control mt-3 mb-3"
+          name=""
+          id=""
+          placeholder="Password"
+        />
+        <button id="log_btn" class="btn btn-success">Enter</button>
+      </div>
+    </section>
+
+    <!-- Transaction-Area Start -->
+
+    <section id="Transaction-Area" class="container">
+      <h2 class="text-center">Transaction Area</h2>
+      <div class="row column-gap-3 text-white gap-2">
+        <div class="col-md-4  Deposit">
+          <h5>Deposit</h5>
+          <h1>$00</h1>
+        </div>
+        <div class="col-md-4  Withdraw">
+          <h5>Withdraw</h5>
+          <h1>$00</h1>
+        </div>
+        <div class="col  Balance">
+          <h5>Balance</h5>
+          <h1>$1240</h1>
+        </div>
+      </div>
+    </section>
+    <!-- javascript Start -->
+    <script>
+      let log_btn = document.getElementById("log_btn");
+
+      log_btn.addEventListener("click", EventClick);
+      function EventClick() {
+        let loginForm = document.getElementById("loginForm");
+        loginForm.style = "display:none";
+        document.querySelector("#Transaction-Area").style = "display:block;";
+      }
+    </script>
+  </body>
 </html>
