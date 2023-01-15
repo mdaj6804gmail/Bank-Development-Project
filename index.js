@@ -6,6 +6,7 @@ function EventClick() {
   let loginForm = document.getElementById("loginForm");
   loginForm.style = "display:none";
   document.querySelector("#Transaction-Area").style = "display:block;";
+  document.getElementById("card").style="display:block";
 }
 // login button event handler End
 
@@ -63,3 +64,36 @@ function updatespanText(id, DepositNumber) {
   document.getElementById(id).innerText = total;
   document.getElementById("Deposit_Amaomd").value = "";
 }
+
+
+
+
+// card 
+
+
+
+
+// const card=document.getElementById("card");
+// const img_over=document.getElementById("img_over");
+// img_over.addEventListener("mouseover",function(){
+//   document.getElementById("MY_Photo").style="display:none";
+//   const card_hidden_con=document.getElementById("card_hidden");
+//   card_hidden_con.style="display:block;";
+  
+//   });
+
+
+//   img_over.addEventListener("mouseout",function(){
+//     document.getElementById("MY_Photo").style="display:block";
+// const card_hidden_con=document.getElementById("card_hidden");
+// card_hidden_con.style="display:none";
+// });
+
+
+
+
+
+
+
+
+
