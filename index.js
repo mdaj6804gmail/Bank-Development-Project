@@ -19,18 +19,7 @@ Deposit_btn.addEventListener("click", function () {
   updatespanText("corentDeposit", DepositNumber);
   document.getElementById("Deposit_Amaomd").value = "";
   updatespanText("BalanceMonitor", DepositNumber);
-  //  const Deposit_Amaomd=document.getElementById("Deposit_Amaomd").value;
-  // const DepositNumber=parseFloat(Deposit_Amaomd);
-
-  //    const corentDeposit=document.getElementById("corentDeposit").innerText;
-  // const corentDepositNumber=parseFloat(corentDeposit);
-  // const totalDeposit=DepositNumber+corentDepositNumber;
-  // document.getElementById("corentDeposit").innerText=totalDeposit;
-  // //BalanceMonitor
-  // const BalanceMonitor=document.getElementById("BalanceMonitor").innerText;
-  // const BalanceMonitorNumber=parseFloat(BalanceMonitor);
-  // const totalBalance=DepositNumber+BalanceMonitorNumber;
-  // document.getElementById("BalanceMonitor").innerText=totalBalance;
+  
 });
 
 //Withdraw_btn addeven haneler
@@ -38,18 +27,11 @@ Deposit_btn.addEventListener("click", function () {
 const Withdraw_btn = document.getElementById("Withdraw_btn");
 Withdraw_btn.addEventListener("click", function () {
   const WithdrawNumber = getinput("Withdraw_Amaomd");
- updatespanText("Withdraw", WithdrawNumber);
+  updatespanText("Withdraw",WithdrawNumber);
+ updatespanText("BalanceMonitor",-1*WithdrawNumber);
+ document.getElementById("Withdraw_Amaomd").value = "";
 
-  const Balance = document.getElementById("BalanceMonitor").innerText;
-  const BalanceNumber = parseFloat(Balance);
-  const total = BalanceNumber - WithdrawNumber;
-  document.getElementById("BalanceMonitor").innerText = total;
-  document.getElementById("Withdraw_Amaomd").value = "";
 
-  // const corentDeposit=document.getElementById("corentDeposit").innerText;
-  // const corentDepositNumber=parseFloat(corentDeposit);
-  // const totalDeposit=DepositNumber+corentDepositNumber;
-  // document.getElementById("corentDeposit").innerText=totalDeposit;
 });
 function getinput(id) {
   const Amaomd = document.getElementById(id).value;
@@ -64,36 +46,6 @@ function updatespanText(id, DepositNumber) {
   document.getElementById(id).innerText = total;
   document.getElementById("Deposit_Amaomd").value = "";
 }
-
-
-
-
-// card 
-
-
-
-
-// const card=document.getElementById("card");
-// const img_over=document.getElementById("img_over");
-// img_over.addEventListener("mouseover",function(){
-//   document.getElementById("MY_Photo").style="display:none";
-//   const card_hidden_con=document.getElementById("card_hidden");
-//   card_hidden_con.style="display:block;";
-  
-//   });
-
-
-//   img_over.addEventListener("mouseout",function(){
-//     document.getElementById("MY_Photo").style="display:block";
-// const card_hidden_con=document.getElementById("card_hidden");
-// card_hidden_con.style="display:none";
-// });
-
-
-
-
-
-
 
 
 
